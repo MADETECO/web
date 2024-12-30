@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="sticky-footer.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
   </head>
   <body>
       <nav class="navbar navbar-expand-lg" style="background-color: #3f4d59;">
@@ -143,5 +143,23 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <!-- Cookie settings -->
+    <script src="src/bootstrap-cookie-consent-settings.js"></script>
+    <script>
+      const cookieSettings = new BootstrapCookieConsentSettings({
+        contentURL: '../cookie-consent-content',
+        privacyPolicyUrl: 'politica-de-privacidad.html',
+        legalNoticeUrl: 'terminos-y-condiciones.html',
+        lang: "es",
+        postSelectionCallback: function () {
+          location.reload(); // reload after selection
+        },
+      });
+      function showSettingsDialog() {
+        cookieSettings.showDialog();
+      }
+      document.getElementById('settingsOutput').innerText = JSON.stringify(cookieSettings.getSettings());
+      document.getElementById('settingsAnalysisOutput').innerText = cookieSettings.getSettings('statistics');
+    </script>
   </body>
 </html>

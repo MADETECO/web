@@ -10,45 +10,46 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="sticky-footer.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet" />
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg" style="background-color: #3f4d59;">
-        <div class="container-fluid">
-          <a class="navbar-brand text-light" href="https://www.madeteco.es/">
-            <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-middle"> Marine Design Technology Consulting
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="contact.html">Contact</a>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+    <nav class="navbar navbar-expand-lg" style="background-color: #3f4d59">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="https://www.madeteco.es/">
+          <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-middle" /> Marine Design Technology
+          Consulting
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <li class="nav-item">
-                <a class="nav-link text-light" href="index_es.html">Español 🇪🇸</a>
-              </li>
-            </ul>
-          </div>
+              <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="index_es.html">Español 🇪🇸</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <br />
-      <main role="main" class="container-fluid"></main>
+      </div>
+    </nav>
+    <br />
+    <main role="main" class="container-fluid">
       <div class="container">
         <div class="container row align-items-center">
           <div class="col-xl">
@@ -98,7 +99,6 @@
                     alt="https://unsplash.com/es/fotos/grulla-azul-y-amarilla-cerca-del-cuerpo-de-agua-durante-el-dia-_0YnY0AtAVk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
                   />
                 </div>
-                
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -111,22 +111,22 @@
             </div>
           </div>
         </div>
-        <br/>
+        <br />
       </div>
     </main>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container-fluid" style="background-color: #3f4d59;">
-      <p class="m-0 text-center text-light">
-        &copy; Copyright Marine Design Technology Consulting, S.L.U. ·
-      <a class="m-0 text-center text-light" href="#">Terms of service</a>
-      ·
-      <a class="m-0 text-center text-light" href="#">Privacy Policy</a>
-      ·
-      <a class="m-0 text-center text-light" href="#">Cookies Policy</a>
-    </p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid" style="background-color: #3f4d59">
+        <p class="m-0 text-center text-light">
+          &copy; Copyright Marine Design Technology Consulting, S.L.U. ·
+          <a class="m-0 text-center text-light" href="#">Terms of service</a>
+          ·
+          <a class="m-0 text-center text-light" href="#">Privacy Policy</a>
+          ·
+          <a class="m-0 text-center text-light" href="#">Cookies Policy</a>
+        </p>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -143,5 +143,23 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <!-- Cookie settings -->
+    <script src="src/bootstrap-cookie-consent-settings.js"></script>
+    <script>
+      const cookieSettings = new BootstrapCookieConsentSettings({
+        contentURL: '../cookie-consent-content',
+        privacyPolicyUrl: 'privacy-policy.html',
+        legalNoticeUrl: 'terms-and-conditions.html',
+        lang: "en",
+        postSelectionCallback: function () {
+          location.reload(); // reload after selection
+        },
+      });
+      function showSettingsDialog() {
+        cookieSettings.showDialog();
+      }
+      document.getElementById('settingsOutput').innerText = JSON.stringify(cookieSettings.getSettings());
+      document.getElementById('settingsAnalysisOutput').innerText = cookieSettings.getSettings('statistics');
+    </script>
   </body>
 </html>

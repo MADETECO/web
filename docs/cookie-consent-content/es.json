@@ -1,0 +1,31 @@
+{
+  "title": "Opciones de Privacidad",
+  "body": "Utilizamos cookies y tecnologías similares que son necesarias para el funcionamiento del sitio web. Las cookies adicionales solo se utilizan con su consentimiento. Usted es libre de dar, denegar o retirar su consentimiento en cualquier momento utilizando el enlace de \"configuración de cookies\" en la parte inferior de cada página. Puede dar su consentimiento a nuestro uso de cookies haciendo clic en \"Aceptar\". Para obtener más información sobre qué información se recopila y cómo se comparte con nuestros socios, lea nuestra --privacy-policy--.",
+  "privacyPolicy": "Política de Privacidad",
+  "legalNotice": "Términos y Condiciones",
+  "mySettings": "Opciones",
+  "buttonNotAgree": "No consiento",
+  "buttonAgree": "Consiento",
+  "buttonSaveSelection": "Guardar selección",
+  "buttonAgreeAll": "Consiento a todo",
+  "categories": {
+    "necessary": {
+      "title": "Necesarias",
+      "description": ["Requeridas para el funcionamiento de la web"]
+    },
+    "statistics": {
+      "title": "Analíticas",
+      "description": ["Monitoreo del uso del sitio web y optimización de la experiencia del usuario"]
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": ["Evaluación de acciones de marketing"]
+    },
+    "personalization": {
+      "title": "Personalización",
+      "description": ["Almacenamiento de sus preferencias de visitas anteriores",
+        "Recopilación de comentarios de los usuarios para mejorar nuestro sitio web",
+        "Registro de sus intereses para proporcionarle contenidos y ofertas personalizadas"]
+    }
+  }
+}
